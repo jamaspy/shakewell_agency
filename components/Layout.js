@@ -1,19 +1,16 @@
 import Nav from "./Nav";
 import SEO from "./SEO";
-// import Header from "./Header";
-import styles from "../styles/Home.module.css";
 import Footer from "./Footer";
+import styles from "../styles/Layout.module.scss";
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <main className={styles.main}>
       <SEO />
       <Nav />
-      <div className={styles.container}>
-        <main className={styles.main}>{children}</main>
-      </div>
+      <section className={styles.children}>{children}</section>
       <Footer />
-    </>
+    </main>
   );
 };
 

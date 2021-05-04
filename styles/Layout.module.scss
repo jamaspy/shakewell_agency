@@ -1,0 +1,9 @@
+@import "./colours";
+@import "./variables";
+
+.main {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: $color-black;
+  color: $color_white;
+}

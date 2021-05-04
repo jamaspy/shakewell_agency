@@ -3,7 +3,7 @@ import Link from "next/link";
 import { server } from "../../../config";
 import { useRouter } from "next/router";
 import { Layout, SEO } from "../../../components";
-import articleStyles from "../../../styles/Article.module.css";
+import articleStyles from "../../../styles/Article.module.scss";
 const Article = ({ article }) => {
   //   const router = useRouter();
   //   const { id } = router.query;
@@ -13,6 +13,9 @@ const Article = ({ article }) => {
     <Layout>
       <SEO title={data.title} description={data.excerpt} />
       <div className={articleStyles.article_container}>
+        <Link href="/">
+          <span className={articleStyles.article_button}>&larr;</span>
+        </Link>
         <h1>{data.title}</h1>
         <p
           dangerouslySetInnerHTML={{
@@ -20,9 +23,6 @@ const Article = ({ article }) => {
           }}
         ></p>
       </div>
-      <Link href="/">
-        <span className={articleStyles.article_button}>&larr; Home</span>
-      </Link>
     </Layout>
   );
 };

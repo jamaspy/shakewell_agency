@@ -1,6 +1,7 @@
 import React from "react";
 import ArticleItem from "./ArticleItem";
-import articleStyles from "../../styles/Article.module.css";
+import articleStyles from "../../styles/Article.module.scss";
+// import { articles } from "../../data";
 const ArticleList = ({ articles }) => {
   return (
     <div className={articleStyles.grid}>

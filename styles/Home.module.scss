@@ -1,0 +1,16 @@
+@import "./variables";
+.wrapper {
+  padding: $default_padding;
+}
+.title {
+  margin-top: 50px;
+  line-height: 1.15;
+  font-size: $X_large_font-size;
+  text-align: center;
+}
+
+.logo_image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

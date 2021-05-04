@@ -1,0 +1,22 @@
+@import "./variables";
+@import "./colours";
+.parent {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: minmax(150px, 25%) 1fr;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.main {
+}
+.client_box {
+  font-size: 2rem;
+  font-weight: $font-thin;
+  &:hover {
+    cursor: pointer;
+    color: $color-primary;
+  }
+}

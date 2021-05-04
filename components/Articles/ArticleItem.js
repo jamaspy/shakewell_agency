@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import articleStyles from "../../styles/Article.module.css";
+import articleStyles from "../../styles/Article.module.scss";
 const ArticleItem = ({ article }) => {
   return (
     <Link href="/article/[id]" as={`/article/${article.id}`}>

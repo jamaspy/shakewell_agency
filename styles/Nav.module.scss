@@ -1,0 +1,21 @@
+@import "./colours";
+@import "./variables";
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 200;
+  & ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+  & ul li a {
+    font-size: $default_font_size;
+    margin: 5px 15px;
+    &:hover {
+      color: $color_primary;
+    }
+  }
+}

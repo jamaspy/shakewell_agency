@@ -1,0 +1,27 @@
+@import "./colours";
+// Grid
+$grid_gap: 1rem;
+$child_min_width: 340px;
+$child_max_width: 1fr;
+
+// Borders
+$small_border_radius: 5px;
+$default_border_radius: 10px;
+$full_border_radius: 100%;
+$default_border: 1px solid $color_white;
+
+// Font
+$default_font_size: 1.2rem;
+$medium_font_size: 2rem;
+$large_font-size: 3rem;
+$X_large_font-size: 4rem;
+$max_char_length: 45ch;
+
+$font-thin: 200;
+$font-default: 300;
+
+// Margin & Padding
+$default_padding: 1.5rem;
+$default_margin: 1rem;
+$default_line_height: 1.5;
+$button_padding: 0.4rem 0.8rem;

@@ -1,0 +1,144 @@
+@import "./colours";
+@import "./variables";
+
+.grid {
+  display: grid;
+  grid-gap: $grid-gap;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax($child-min-width, $child-max-width)
+  );
+  margin: 3rem 0;
+}
+
+.card {
+  // width: clamp(23ch, 360px, 46ch);
+  text-overflow: ellipsis;
+  padding: $default_padding;
+  text-align: left;
+  color: $color_white;
+  text-decoration: none;
+  border: $default_border;
+  border-radius: $default_border_radius;
+  transition: all 0.6s ease;
+  // margin: 0 10px;
+  &:hover,
+  :focus,
+  :active {
+    color: $color-black;
+    border: none;
+    background: $color-primary;
+    background: -webkit-linear-gradient(
+      to right,
+      $color-primary,
+      $color-secondry
+    );
+    background: linear-gradient(to right, $color-primary, $color-secondry);
+  }
+}
+
+.card h3 {
+  margin-bottom: $default_margin;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  // white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90%;
+}
+
+.logo {
+  height: 1em;
+}
+
+.article_container {
+  padding: $default_padding;
+  color: $color_white;
+  font-size: $default_font_size;
+  line-height: $default_line_height;
+  position: relative;
+}
+
+.article_button {
+  border: $default_border;
+  border-radius: $full_border_radius;
+  padding: $button_padding;
+  margin-right: 1rem;
+  color: $color_white;
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+  position: fixed;
+  top: 30;
+  right: 0;
+}
+
+.article_button:hover {
+  border: none;
+  cursor: pointer;
+  color: $color-black;
+  background: $color-primary;
+  all: -webkit-linear-gradient(to right, $color-primary, $color-secondry);
+  background: linear-gradient(to right, $color-primary, $color-secondry);
+  -webkit-animation: bounceRight 2s infinite;
+  animation: bounceRight 1s infinite;
+}
+
+@-webkit-keyframes bounceRight {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  40% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  60% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+}
+@-moz-keyframes bounceRight {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-10px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+}
+@keyframes bounceRight {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+  40% {
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  60% {
+    -ms-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+}
+/* /right bounce */
