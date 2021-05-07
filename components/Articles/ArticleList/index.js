@@ -1,6 +1,6 @@
 import React from "react";
-import ArticleItem from "./ArticleItem";
-import articleStyles from "../../styles/Article.module.scss";
+import ArticleItem from "../ArticleCard";
+import articleStyles from "./styles.module.scss";
 // import { articles } from "../../data";
 const ArticleList = ({ articles }) => {
   return (

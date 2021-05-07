@@ -1,69 +1,18 @@
-@import "./colours";
-@import "./variables";
-
-.grid {
-  display: grid;
-  grid-gap: $grid-gap;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax($child-min-width, $child-max-width)
-  );
-  margin: 3rem 0;
-}
-
-.card {
-  // width: clamp(23ch, 360px, 46ch);
-  text-overflow: ellipsis;
-  padding: $default_padding;
-  text-align: left;
-  color: $color_white;
-  text-decoration: none;
-  border: $default_border;
-  border-radius: $default_border_radius;
-  transition: all 0.6s ease;
-  // margin: 0 10px;
-  &:hover,
-  :focus,
-  :active {
-    color: $color-black;
-    border: none;
-    background: $color-primary;
-    background: -webkit-linear-gradient(
-      to right,
-      $color-primary,
-      $color-secondry
-    );
-    background: linear-gradient(to right, $color-primary, $color-secondry);
-  }
-}
-
-.card h3 {
-  margin-bottom: $default_margin;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  // white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 90%;
-}
-
-.logo {
-  height: 1em;
-}
+@import "../../../styles/variables";
 
 .article_container {
+  min-height: 90vh;
   padding: $default_padding;
   color: $color_white;
   font-size: $default_font_size;
   line-height: $default_line_height;
   position: relative;
 }
-
+.main_article_title {
+  text-align: center;
+  font-weight: $font-black;
+  text-transform: capitalize;
+}
 .article_button {
   border: $default_border;
   border-radius: $full_border_radius;
@@ -78,7 +27,6 @@
   top: 30;
   right: 0;
 }
-
 .article_button:hover {
   border: none;
   cursor: pointer;

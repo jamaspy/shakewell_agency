@@ -1,7 +1,5 @@
-import Nav from "./Nav";
-import SEO from "./SEO";
-import Footer from "./Footer";
-import styles from "../styles/Layout.module.scss";
+import { Footer, Nav, SEO } from "../";
+import styles from "./styles.module.scss";
 
 const Layout = ({ children }) => {
   return (

@@ -3,12 +3,13 @@ import Link from "next/link";
 import { server } from "../../../config";
 import { useRouter } from "next/router";
 import { Layout, SEO } from "../../../components";
-import articleStyles from "../../../styles/Article.module.scss";
+import articleStyles from "./styles.module.scss";
 const Article = ({ article }) => {
   //   const router = useRouter();
   //   const { id } = router.query;
-  console.log(article.data);
+
   const { data } = article;
+
   return (
     <Layout>
       <SEO title={data.title} description={data.excerpt} />
@@ -16,7 +17,7 @@ const Article = ({ article }) => {
         <Link href="/">
           <span className={articleStyles.article_button}>&larr;</span>
         </Link>
-        <h1>{data.title}</h1>
+        <h1 className={articleStyles.main_article_title}>{data.title}</h1>
         <p
           dangerouslySetInnerHTML={{
             __html: data.body,
@@ -30,7 +31,6 @@ const Article = ({ article }) => {
 export const getStaticProps = async (context) => {
   const res = await fetch(`${server}/api/v1/posts/${context.params.id}`);
   const article = await res.json();
-  console.log("TEST JAMES NOWY", article);
   return {
     props: {
       article,

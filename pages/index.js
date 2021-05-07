@@ -1,12 +1,13 @@
 import styles from "../styles/Home.module.scss";
 import Image from "next/image";
-import { ArticleList } from "../components/Articles";
+import { ArticleList, Layout } from "../components/";
 import { server } from "../config";
-import { Layout } from "../components";
+
 export default function Home({ articles }) {
   const {
     data: { data },
   } = articles;
+
   return (
     <Layout>
       <div className={styles.logo_image}>

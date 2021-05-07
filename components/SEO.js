@@ -14,7 +14,8 @@ const SEO = ({ title, keywords, description }) => {
 };
 SEO.defaultProps = {
   title: "Shakewell Agency",
-  keywords: "web development, programming, websites, applications",
+  keywords:
+    "web development, programming, websites, applications, mobile apps, app, design, product, product design, deployment, hosting",
   description: "Digital Agency making cool internet things",
 };
 

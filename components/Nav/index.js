@@ -1,5 +1,5 @@
 import Link from "next/link";
-import navStyles from "../styles/Nav.module.scss";
+import navStyles from "./styles.module.scss";
 
 const Nav = () => {
   return (

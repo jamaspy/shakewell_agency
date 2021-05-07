@@ -1,0 +1,11 @@
+@import "../../styles/colours";
+@import "../../styles/variables";
+
+.filled {
+  font-size: $medium_font-size;
+  color: $color-primary;
+}
+.outline {
+  font-size: $medium_font-size;
+  color: $color_white;
+}
