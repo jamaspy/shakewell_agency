@@ -13,27 +13,28 @@ const ArticleItem = ({ article }) => {
   return (
     <>
       <div className={styles.card}>
-        <div className={styles.article_image}>
-          <Image
-            src="/images/logo.png"
-            alt="Shakewell Logo"
-            priority={true}
-            quality={90}
-            width={100}
-            height={100}
-          />
-        </div>
-        <Link href="/article/[id]" as={`/article/${article.id}`}>
-          <div className={styles.article_content}>
-            <h3 className={styles.article_title}>{article.title} &rarr;</h3>
-            <p className={styles.article_date}>Published: {display_date}</p>
-            <p className={styles.article_excerpt}>{article.excerpt}</p>
-            <p className={styles.article_date}>
-              Author: {article.author || "John Smith"}
-            </p>
+        <div className={styles.content_wrapper}>
+          <div className={styles.article_image}>
+            <Image
+              src="/images/logo.png"
+              alt="Shakewell Logo"
+              priority={true}
+              quality={90}
+              width={100}
+              height={100}
+            />
           </div>
-        </Link>
-        <div>
+          <Link href="/article/[id]" as={`/article/${article.id}`}>
+            <div className={styles.article_content}>
+              <h3 className={styles.article_title}>{article.title} &rarr;</h3>
+              <p className={styles.article_date}>Published: {display_date}</p>
+              <p className={styles.article_excerpt}>{article.excerpt}</p>
+              <p className={styles.article_date}>
+                Author: {article.author || "John Smith"}
+              </p>
+            </div>
+          </Link>
+
           <div className={styles.article_tag_wrapper}>
             {mockTags &&
               mockTags.map((tag, index) => (
