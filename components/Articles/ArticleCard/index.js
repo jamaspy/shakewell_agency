@@ -3,11 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { Heart, HeartOutline } from "../../Icons";
 import styles from "./styles.module.scss";
+import { v4 as uuidv4 } from "uuid";
 const ArticleItem = ({ article }) => {
   const date = new Date(article.created_at);
   const display_date = date.toDateString();
   const [favourite, setFavourite] = useState(false);
 
+  const mockTags = ["design", "frontend", "backend"];
   return (
     <>
       <div className={styles.card}>
@@ -24,11 +26,23 @@ const ArticleItem = ({ article }) => {
         <Link href="/article/[id]" as={`/article/${article.id}`}>
           <div className={styles.article_content}>
             <h3 className={styles.article_title}>{article.title} &rarr;</h3>
-            <p className={styles.article_excerpt}>{article.excerpt}</p>
-            <p className={styles.article_date}>Author: John Smith</p>
             <p className={styles.article_date}>Published: {display_date}</p>
+            <p className={styles.article_excerpt}>{article.excerpt}</p>
+            <p className={styles.article_date}>
+              Author: {article.author || "John Smith"}
+            </p>
           </div>
         </Link>
+        <div>
+          <div className={styles.article_tag_wrapper}>
+            {mockTags &&
+              mockTags.map((tag, index) => (
+                <li key={uuidv4()} className={styles.article_tag}>
+                  #{tag}
+                </li>
+              ))}
+          </div>
+        </div>
         <button
           className={styles.article_favourite}
           onClick={() => setFavourite(!favourite)}

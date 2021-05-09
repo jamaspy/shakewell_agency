@@ -54,7 +54,28 @@
   text-transform: capitalize;
   cursor: pointer;
 }
-
+.article_tag_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  list-style: none;
+  width: 75%;
+  flex-wrap: wrap;
+}
+.article_tag {
+  margin: 5px;
+  border: 2px solid $color-white;
+  padding: 5px;
+  border-radius: $default_border_radius;
+  font-size: 0.6rem;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    background: $color-primary;
+    color: $color-black;
+  }
+}
 .article_favourite {
   background-color: black;
   border: none;
