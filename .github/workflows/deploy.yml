@@ -1,7 +1,7 @@
 name: Push to S3 Master
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   # publish blog using webhook
   repository_dispatch:
     types: [ build ]
