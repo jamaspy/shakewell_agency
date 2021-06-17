@@ -1,0 +1,35 @@
+name: Push to S3 Master
+on:
+  push:
+    branches: [ master ]
+  # publish blog using webhook
+  repository_dispatch:
+    types: [ build ]
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: master
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm build
+
+      - name: Deploy
+        uses: reggionick/s3-deploy@v3
+        with:
+          folder: public
+          bucket: 'shakewell.agency'
+          bucket-region: 'ap-southeast-2'
+          delete-removed: true
+          no-cache: true
+          private: true
+          dist-id: 'E1LCN1HRVY1E1Q'
+          invalidation: /
