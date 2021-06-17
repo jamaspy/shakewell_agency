@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       Created By{" "}
       <img
-        src="/images/black_logo.png"
+        src={require('../../pages/images/black_logo.png')}
         alt="Shakewell Logo"
         className={styles.logo}
       />{" "}

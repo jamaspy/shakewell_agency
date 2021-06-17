@@ -25,7 +25,7 @@ jobs:
       - name: Deploy
         uses: reggionick/s3-deploy@v3
         with:
-          folder: public
+          folder: out
           bucket: 'shakewell.agency'
           bucket-region: 'ap-southeast-2'
           delete-removed: true

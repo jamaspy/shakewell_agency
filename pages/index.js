@@ -1,7 +1,7 @@
 import styles from "../styles/Home.module.scss";
-import Image from "next/image";
 import { ArticleList, Layout } from "../components/";
 import { server } from "../config";
+import React from 'react';
 
 export default function Home({ articles }) {
   const {
@@ -11,14 +11,7 @@ export default function Home({ articles }) {
   return (
     <Layout>
       <div className={styles.logo_image}>
-        <Image
-          src="/images/logo.png"
-          alt="Shakewell Logo"
-          priority={true}
-          quality={90}
-          width={700}
-          height={700}
-        />
+        <img src={require('./images/logo.png?&webp&resize&size=700')} alt="Shakewell Logo" />
       </div>
       <h1 className={styles.title}>A group of devs, making internet things</h1>
       <div className={styles.wrapper}>

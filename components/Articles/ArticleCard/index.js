@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { Heart, HeartOutline } from "../../Icons";
 import styles from "./styles.module.scss";
 import { v4 as uuidv4 } from "uuid";
@@ -15,14 +14,7 @@ const ArticleItem = ({ article }) => {
       <div className={styles.card}>
         <div className={styles.content_wrapper}>
           <div className={styles.article_image}>
-            <Image
-              src="/images/logo.png"
-              alt="Shakewell Logo"
-              priority={true}
-              quality={90}
-              width={100}
-              height={100}
-            />
+            <img src={require('../../../pages/images/logo.png?&webp&resize&size=100')} alt="Shakewell Logo" />
           </div>
           <Link href="/article/[id]" as={`/article/${article.id}`}>
             <div className={styles.article_content}>

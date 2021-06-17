@@ -1,7 +1,6 @@
 import React from "react";
 import { Layout } from "../components";
 import styles from "../styles/work.module.scss";
-import Image from "next/image";
 
 export const clients = [
   "Riptide",
@@ -22,14 +21,6 @@ const Work = () => {
           ))}
         </div>
         <div className={styles.main}>
-          <Image
-            src="/images/logo.png"
-            alt="Shakewell Logo"
-            priority={true}
-            quality={90}
-            width={300}
-            height={300}
-          />
         </div>
       </div>
     </Layout>
