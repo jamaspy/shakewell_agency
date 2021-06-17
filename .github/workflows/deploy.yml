@@ -17,10 +17,10 @@ jobs:
           ref: master
 
       - name: Install dependencies
-        run: npm install
+        run: yarn install
 
       - name: Build
-        run: npm build
+        run: yarn build
 
       - name: Deploy
         uses: reggionick/s3-deploy@v3
